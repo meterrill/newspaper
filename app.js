@@ -14,7 +14,11 @@ newspaperBeats.config(function($stateProvider) {
 
   $stateProvider.state('beats.reporters', {
     url: "/:beatId",
+<<<<<<< HEAD
     templateUrl: "partials/beats.reporters.html",
+=======
+    templareUrl: "partials/beats.reporters.html",
+>>>>>>> c728d69... create state/template for 'beats.reporters'
     controller: 'ReportersCtrl'
   });
 });
