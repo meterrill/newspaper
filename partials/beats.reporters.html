@@ -2,7 +2,15 @@
   <h3>Reporters for the {{beat.name}} beat</h3>
   <ul>
     <li ng-repeat="item in beat.reporters">
-      {{item.name}}
+      <span ng-click="details = true">
+        {{item.name}}
+      </span>
+      <span ng-click="details = false" ng-show="details">
+        <ul>
+          <li>Birthday: {{item.birthday}}</li>
+          <li>Years of Employment: {{item.yearsOfEmployment}}</li>
+        </ul>
+      </span>
     </li>
   </ul>
 </div>
