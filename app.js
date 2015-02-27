@@ -14,7 +14,7 @@ newspaperBeats.config(function($stateProvider) {
 
   $stateProvider.state('beats.reporters', {
     url: "/:beatId",
-    templareUrl: "partials/beats.reporters.html",
+    templateUrl: "partials/beats.reporters.html",
     controller: 'ReportersCtrl'
   });
 });
