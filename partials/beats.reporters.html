@@ -1,43 +1,33 @@
-<<<<<<< HEAD
-<div ng-show="beat.reporters.length">
-  <h3>Reporters for the {{beat.name}} beat</h3>
-  <ul>
-    <li ng-repeat="item in beat.reporters">
-      <span ng-click="details = true">
-        {{item.name}}
-      </span>
-      <span ng-click="details = false" ng-show="details">
-        <ul>
-          <li>Birthday: {{item.birthday}}</li>
-          <li>Years of Employment: {{item.yearsOfEmployment}}</li>
-        </ul>
-      </span>
-=======
-<div ng-show="beat.reporters.lenght">
-  <h2>Reporters for the {{beat.name}} beat</h2>
-  <ul>
-    <li ng-repeat="item in beat.reporters">
-      {{item.name}}
->>>>>>> c728d69... create state/template for 'beats.reporters'
-    </li>
-  </ul>
-</div>
-
-<div>
-<<<<<<< HEAD
-  <h3>Add a reporter to the {{beat.name}} beat</h3>
-  <form ng-submit="addReporter()" class="form-inline">
-    <div class="form-group">
-      <input type="text" ng-model="reporterName" class="form-control" placeholder="Enter name of reporter">
-      <input type="text" ng-model="birthday" class="form-control" placeholder="Enter birthday for reporter">
-      <input type="text" ng-model="yearsOfEmployment" class="form-control" placeholder="Enter years of employment">
-=======
-  <h2>Add a reporter to the {{beat.name}} beat</h2>
-  <form ng-submit="addReporter()" class="form-inline">
-    <div class="form-group">
-      <input type="text" ng-model="reporterName" class="form-control" placeholder="Enter name of reporter">
->>>>>>> c728d69... create state/template for 'beats.reporters'
+<div class="col-md-8">
+  <div class="well">
+    <div>
+      <h3>Add a reporter to the {{beat.name}} beat</h3>
+      <form ng-submit="addReporter()" class="form-inline">
+        <div class="form-group">
+          <input type="text" ng-model="reporterName" class="form-control" placeholder="Enter name of reporter">
+          <input type="text" ng-model="birthday" class="form-control" placeholder="Enter birthday for reporter">
+          <input type="text" ng-model="yearsOfEmployment" class="form-control" placeholder="Enter years of employment">
+        </div>
+        <button type="submit" class="btn btn-default">Add</button>
+      </form>
     </div>
-    <button type="submit" class="btn btn-default">Add</button>
-  </form>
+
+    <div ng-show="beat.reporters.length">
+      <h1>Reporters for the {{beat.name}} beat</h1>
+      <p>Click reporter's name to show details / Click details to hide again</p>
+      <ul>
+        <li ng-repeat="item in beat.reporters">
+          <span ng-click="details = true">
+            {{item.name}}
+          </span>
+          <span ng-click="details = false" ng-show="details">
+            <ul>
+              <li>Birthday: {{item.birthday}}</li>
+              <li>Years of Employment: {{item.yearsOfEmployment}}</li>
+            </ul>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
